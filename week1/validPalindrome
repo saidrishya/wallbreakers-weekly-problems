@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool isPalindrome(string str) {
+    if(str.size()==0) return true;
+        string s="";
+        for(auto i: str){
+            if(isalpha(i) || isdigit(i)){
+                char t = tolower(i);
+                s+=t;
+            }
+        } //cout<<s;
+        int n=s.size();
+       for(int i=0; i<n/2; i++){
+           if(s[i] != s[n-i-1]) return false;
+       }
+return true;
+    }
+};
