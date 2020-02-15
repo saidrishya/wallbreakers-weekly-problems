@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int binaryGap(int N) {
+        int i=0, right=-1,res=0;
+        while(N){
+            i++;
+            if(N%2 == 1){
+                if(right!=-1){
+                res = max(res, i-right);
+              }
+                right=i;
+            }
+            
+            N/=2;
+        }
+        
+        return res;
+    }
+};
