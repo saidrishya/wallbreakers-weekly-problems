@@ -1,0 +1,10 @@
+class Solution {
+public:
+    char findTheDifference(string s, string t) {
+       int x=0;
+        for(auto i: s+t){
+            x = x^i;
+        }
+return char(x);
+    }
+};
